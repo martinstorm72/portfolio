@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +13,6 @@
             --text-dim: #8b949e;
             --accent-color: #58a6ff;
             --accent-glow: rgba(88, 166, 255, 0.3);
-            --transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         body {
@@ -24,40 +22,26 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: var(--transition);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .container {
-            max-width: 950px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
-        header {
-            text-align: center;
-            padding: 100px 0 60px 0;
+        header { 
+            text-align: center; 
+            padding: 80px 0 40px 0;
         }
 
         .profile-img-container {
-            width: 160px;
-            height: 160px;
-            margin: 0 auto 30px;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
             border-radius: 50%;
             padding: 5px;
             background: linear-gradient(45deg, var(--accent-color), #d2a8ff);
-            box-shadow: 0 0 30px var(--accent-glow);
-            animation: float 4s ease-in-out infinite;
         }
 
         .profile-img-container img {
@@ -68,206 +52,133 @@
             border: 4px solid var(--bg-color);
         }
 
-        @keyframes float {
+        h1 { font-size: 3rem; margin-bottom: 5px; }
+        .subtitle { color: var(--accent-color); text-transform: uppercase; font-weight: 600; letter-spacing: 1px; }
 
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-15px);
-            }
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            color: var(--accent-color);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 1rem;
-        }
-
-        h2 {
-            font-size: 2rem;
-            border-left: 4px solid var(--accent-color);
-            padding-left: 15px;
-            margin: 80px 0 40px 0;
-        }
+        h2 { font-size: 2rem; margin: 60px 0 30px 0; border-left: 4px solid var(--accent-color); padding-left: 15px; }
 
         .project-card {
             background: var(--card-bg);
             border: 1px solid #30363d;
-            border-radius: 24px;
+            border-radius: 20px;
             overflow: hidden;
-            margin-bottom: 60px;
-            transition: var(--transition);
+            margin-bottom: 40px;
         }
 
         .project-image {
             width: 100%;
             height: auto;
+            display: block;
             border-bottom: 1px solid #30363d;
         }
 
-        .project-content {
-            padding: 45px;
-        }
-
-        .project-title {
-            color: var(--accent-color);
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-            margin-top: 0;
-        }
+        .project-content { padding: 30px; }
+        .project-title { color: var(--accent-color); font-size: 1.8rem; margin: 0 0 15px 0; }
 
         .tag {
             background: rgba(88, 166, 255, 0.1);
             color: var(--accent-color);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-right: 8px;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 5px;
             border: 1px solid rgba(88, 166, 255, 0.2);
-            display: inline-block;
-            margin-bottom: 10px;
         }
 
-        .highlight-section {
+        .highlight-box {
             background: rgba(255, 255, 255, 0.03);
-            border-radius: 16px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 15px;
             margin: 15px 0;
             border: 1px solid #30363d;
         }
 
-        .section-title {
-            font-weight: 700;
-            display: block;
-            margin-bottom: 5px;
-        }
+        .box-label { font-weight: 700; display: block; font-size: 0.9rem; margin-bottom: 5px; }
+        .problem { color: #ff7b72; }
+        .solution { color: #7ee787; }
+        .result { color: #d2a8ff; }
 
-        .problem-title {
-            color: #ff7b72;
-        }
+        footer { text-align: center; padding: 60px 0; border-top: 1px solid #30363d; }
 
-        .solution-title {
-            color: #7ee787;
-        }
-
-        .result-title {
-            color: #d2a8ff;
-        }
-
-        .btn-primary,
-        .btn-outline {
-            padding: 16px 35px;
-            border-radius: 12px;
+        .btn {
+            padding: 12px 25px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
             display: inline-block;
             margin: 10px;
-            transition: var(--transition);
+            transition: 0.3s;
         }
 
-        .btn-primary {
-            background: var(--accent-color);
-            color: #0b0e14;
-        }
-
-        .btn-outline {
-            border: 2px solid var(--accent-color);
-            color: var(--accent-color);
-        }
-
-        footer {
-            text-align: center;
-            padding: 120px 0 80px 0;
-            border-top: 1px solid #30363d;
-        }
+        .btn-primary { background: var(--accent-color); color: #0b0e14; }
+        .btn-outline { border: 2px solid var(--accent-color); color: var(--accent-color); }
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
     </style>
 </head>
-
 <body>
 
-    <div class="container">
-        <header>
-            <div class="profile-img-container">
-                <img src="martin.jpeg" alt="Martin Samer Profile">
-            </div>
-            <h1>Martin Samer</h1>
-            <p class="subtitle">SaaS & E-commerce Data Analyst</p>
-        </header>
-
-        <div class="reveal">
-            <h2>Featured Projects</h2>
+<div class="container">
+    <header>
+        <div class="profile-img-container">
+            <img src="martin.jpeg" alt="Martin Samer">
         </div>
+        <h1>Martin Samer</h1>
+        <p class="subtitle">SaaS & E-commerce Data Analyst</p>
+    </header>
 
-        <div class="project-card reveal">
-            <img src="saas-project.png" alt="SaaS Metrics Dashboard" class="project-image">
+    <section>
+        <h2>Featured Projects</h2>
+
+        <div class="project-card">
+            <img src="saas-project.png" alt="SaaS Dashboard" class="project-image">
             <div class="project-content">
                 <h3 class="project-title">The "June Retention" Mystery</h3>
-                <div class="tag-container">
+                <div>
                     <span class="tag">SQL</span><span class="tag">Tableau</span><span class="tag">KPI Analysis</span>
                 </div>
-
-                <div class="highlight-section">
-                    <span class="section-title problem-title">🚩 The Problem</span>
-                    <span>Critical churn spike in June causing MRR to crash for a $3M ARR business.</span>
+                
+                <div class="highlight-box">
+                    <span class="box-label problem">🚩 THE PROBLEM</span>
+                    Critical churn spike in June causing MRR to crash for a $3M ARR business.
                 </div>
-                <div class="highlight-section">
-                    <span class="section-title solution-title">🛠️ The Solution</span>
-                    <span>Segmented users to identify high-risk cohorts and built a North Star KPI tracker.</span>
+                <div class="highlight-box">
+                    <span class="box-label solution">🛠️ THE SOLUTION</span>
+                    Segmented users to identify high-risk cohorts and built a North Star KPI tracker.
                 </div>
-                <div class="highlight-section">
-                    <span class="section-title result-title">✅ The Result</span>
-                    <span>Recovered retention by 22% through targeted intervention.</span>
+                <div class="highlight-box">
+                    <span class="box-label result">✅ THE RESULT</span>
+                    Recovered retention by 22% through targeted intervention.
                 </div>
             </div>
         </div>
 
-        <div class="project-card reveal">
-            <img src="retail-project.png" alt="Retail Analytics Dashboard" class="project-image">
+        <div class="project-card">
+            <img src="retail-project.png" alt="Retail Dashboard" class="project-image">
             <div class="project-content">
                 <h3 class="project-title">The $8M Retail Revenue Mystery</h3>
-                <div class="tag-container">
+                <div>
                     <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Star Schema</span>
                 </div>
 
-                <div class="highlight-section">
-                    <span class="section-title problem-title">🚩 The Problem</span>
-                    <span>16% revenue loss hidden behind "perfect" sales due to unoptimized returns.</span>
+                <div class="highlight-box">
+                    <span class="box-label problem">🚩 THE PROBLEM</span>
+                    16% revenue loss hidden behind "perfect" sales due to unoptimized returns.
                 </div>
-                <div class="highlight-section">
-                    <span class="section-title result-title">💡 Outcome</span>
-                    <span>Eliminated top 10 dead-stock products, saving an estimated $400k annually.</span>
+                <div class="highlight-box">
+                    <span class="box-label result">💡 THE OUTCOME</span>
+                    Eliminated top 10 dead-stock products, saving an estimated $400k annually.
                 </div>
             </div>
         </div>
+    </section>
 
-        <footer class="reveal">
-            <h2>Let's Connect</h2>
-            <a href="mailto:martinsamer91@gmail.com" class="btn-primary">Email Me</a>
-            <a href="https://www.linkedin.com/in/martin-samer-578094295" target="_blank" class="btn-outline">LinkedIn
-                Profile</a>
-        </footer>
-    </div>
-
-    <script>
-        const revealCallback = (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add("active");
-            });
-        };
-        const observer = new IntersectionObserver(revealCallback, { threshold: 0.15 });
-        document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-    </script>
+    <footer>
+        <h2>Let's Connect</h2>
+        <p>Looking for a Data Analyst who speaks the language of growth?</p>
+        <a href="mailto:martinsamer91@gmail.com" class="btn btn-primary">Email Me</a>
+        <a href="https://www.linkedin.com/in/martin-samer-578094295" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
+    </footer>
+</div>
 
 </body>
-
 </html>
