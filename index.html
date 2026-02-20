@@ -3,267 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Martin Samer | Data Analyst Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Martin Samer | Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-color: #0b0e14;
-            --card-bg: #161b22;
-            --text-main: #f0f6fc;
-            --text-dim: #8b949e;
-            --accent-color: #58a6ff;
-            --accent-glow: rgba(88, 166, 255, 0.3);
-            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        /* Reveal Animation Logic */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: var(--transition);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* --- Header --- */
-        header { 
-            text-align: center; 
-            padding: 100px 0 60px 0;
-        }
-
-        .profile-img-container {
-            width: 160px;
-            height: 160px;
-            margin: 0 auto 30px;
-            border-radius: 50%;
-            padding: 5px;
-            background: linear-gradient(45deg, var(--accent-color), #d2a8ff);
-            box-shadow: 0 0 30px var(--accent-glow);
-            animation: float 4s ease-in-out infinite;
-        }
-
-        .profile-img-container img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--bg-color);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
-        }
-
-        h1 { font-size: 3.5rem; margin-bottom: 10px; font-weight: 700; letter-spacing: -1px; }
-        .subtitle { color: var(--accent-color); text-transform: uppercase; letter-spacing: 2px; font-size: 1rem; font-weight: 600; }
-
-        h2.section-header { font-size: 2.2rem; border-left: 5px solid var(--accent-color); padding-left: 20px; margin: 80px 0 40px 0; }
-
-        /* --- Project Cards --- */
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid #30363d;
-            border-radius: 24px;
-            overflow: hidden;
-            margin-bottom: 80px;
-            transition: 0.4s ease;
-        }
-
-        .project-card:hover {
-            border-color: var(--accent-color);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-
-        .project-image {
-            width: 100%;
-            height: auto;
-            border-bottom: 1px solid #30363d;
-        }
-
-        .project-content { padding: 40px; }
-        .project-title { color: var(--accent-color); font-size: 2.4rem; margin-top: 0; margin-bottom: 20px; }
-
-        .tag {
-            background: rgba(88, 166, 255, 0.1);
-            color: var(--accent-color);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-right: 8px;
-            margin-bottom: 10px;
-            border: 1px solid rgba(88, 166, 255, 0.2);
-            display: inline-block;
-        }
-
-        .project-intro { font-style: italic; color: var(--text-dim); font-size: 1.1rem; margin-bottom: 30px; border-left: 3px solid #30363d; padding-left: 20px; }
-
-        .detail-section { margin-top: 25px; }
-        .detail-heading { font-weight: 700; font-size: 1.2rem; display: block; margin-bottom: 8px; }
-        .problem-color { color: #ff7b72; }
-        .solution-color { color: #7ee787; }
-        .result-color { color: #d2a8ff; }
-
-        .step-list { list-style: none; padding: 0; }
-        .step-list li { margin-bottom: 15px; padding-left: 10px; border-left: 2px solid #30363d; }
-
-        /* --- Footer & Buttons --- */
-        footer { text-align: center; padding: 100px 0; border-top: 1px solid #30363d; }
-
-        .btn {
-            padding: 18px 40px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-block;
-            margin: 10px;
-            transition: 0.3s;
-        }
-
-        .btn-primary { background: var(--accent-color); color: #0b0e14; }
-        .btn-outline { border: 2px solid var(--accent-color); color: var(--accent-color); }
-        .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-
-        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #0b0e14; color: #f0f6fc; margin: 0; padding: 20px; line-height: 1.6; }
+        .container { max-width: 850px; margin: 0 auto; }
+        header { text-align: center; padding: 60px 0; }
+        .profile-pic { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #58a6ff; margin-bottom: 20px; }
+        h1 { font-size: 2.8rem; margin: 0; }
+        .subtitle { color: #58a6ff; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .project-card { background: #161b22; border: 1px solid #30363d; border-radius: 20px; margin-bottom: 50px; overflow: hidden; }
+        .project-img { width: 100%; height: auto; display: block; border-bottom: 1px solid #30363d; }
+        .content { padding: 35px; }
+        .tag { background: rgba(88, 166, 255, 0.1); color: #58a6ff; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; margin-right: 6px; border: 1px solid rgba(88, 166, 255, 0.2); }
+        
+        .box { background: rgba(255,255,255,0.03); border-radius: 12px; padding: 18px; margin-top: 15px; border: 1px solid #30363d; }
+        .label { font-weight: bold; display: block; margin-bottom: 4px; font-size: 0.9rem; }
+        ul { padding-left: 20px; margin: 5px 0; }
+        
+        footer { text-align: center; padding: 80px 0; border-top: 1px solid #30363d; }
+        .btn { padding: 14px 28px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; transition: 0.3s; }
+        .blue { background: #58a6ff; color: #0b0e14; }
+        .outline { border: 2px solid #58a6ff; color: #58a6ff; }
+        .small-btn { padding: 8px 16px; font-size: 0.85rem; margin-top: 15px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header class="reveal">
-        <div class="profile-img-container">
-            <img src="martin.jpeg" alt="Martin Samer">
-        </div>
+    <header>
+        <img src="martin.jpeg" alt="Martin Samer" class="profile-pic">
         <h1>Martin Samer</h1>
         <p class="subtitle">SaaS & E-commerce Data Analyst</p>
     </header>
 
-    <h2 class="section-header reveal">Featured Case Studies</h2>
+    <h2 style="border-left: 4px solid #58a6ff; padding-left: 15px; margin-bottom: 30px;">Featured Case Studies</h2>
 
-    <div class="project-card reveal">
-        <img src="saas-project.png" alt="SaaS Metrics Dashboard" class="project-image">
-        <div class="project-content">
-            <h3 class="project-title">🎉 Project Reveal: The "June Retention" Mystery Investigation</h3>
-            <div class="tag-container">
-                <span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">KPI Analysis</span><span class="tag">Business Strategy</span>
+    <div class="project-card">
+        <img src="saas-project.png" alt="SaaS Project" class="project-img">
+        <div class="content">
+            <h3 style="color:#58a6ff; font-size: 1.8rem; margin:0;">The "June Retention" Mystery</h3>
+            <p><span class="tag">SQL</span><span class="tag">Tableau</span></p>
+            <div class="box">
+                <span class="label" style="color:#ff7b72;">🚩 THE PROBLEM</span>
+                Critical churn spike in June causing MRR to crash for a $3M ARR business.
             </div>
+            <div class="box">
+                <span class="label" style="color:#7ee787;">✅ THE RESULT</span>
+                Recovered retention by 22% through targeted intervention.
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="retail-project.png" alt="Retail Project" class="project-img">
+        <div class="content">
+            <h3 style="color:#58a6ff; font-size: 1.8rem; margin:0;">The $8M Retail Revenue Mystery</h3>
+            <p><span class="tag">Power BI</span><span class="tag">DAX</span></p>
+            <div class="box">
+                <span class="label" style="color:#ff7b72;">🚩 THE PROBLEM</span>
+                16% revenue loss hidden behind "perfect" sales due to unoptimized returns.
+            </div>
+            <div class="box">
+                <span class="label" style="color:#d2a8ff;">✅ THE RESULT</span>
+                Eliminated top 10 dead-stock products, saving an estimated $400k annually.
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="content">
+            <h3 style="color:#58a6ff; font-size: 1.8rem; margin:0;">SaaS Startup Survival & Growth Analysis</h3>
+            <p><span class="tag">PostgreSQL</span><span class="tag">Aggregations</span><span class="tag">Business Intelligence</span></p>
             
-            <p class="project-intro">"A dashboard needs to create a narrative through its visual presentation rather than displaying its numerical values. I created this SaaS Metrics Dashboard to discover the reasons behind our business financial losses and the methods to eliminate these losses."</p>
+            <p style="margin-top:15px; font-size: 0.95rem;">This project explores SaaS startup data (funding, growth trends, and industry segments) to uncover meaningful business patterns through structured SQL queries.</p>
 
-            <div class="detail-section">
-                <span class="detail-heading problem-color">🚩 The Problem</span>
-                <p>I discovered a critical danger point in the system which showed itself through the company's $3 million annual revenue.</p>
+            <div class="box">
+                <span class="label" style="color:#7ee787;">📊 KEY INSIGHTS</span>
                 <ul>
-                    <li><strong>Churn Spike:</strong> Our retention failed significantly in June.</li>
-                    <li><strong>Risky Segments:</strong> Customers from the "Basic" plan showed a higher departure rate than users from the "Enterprise" plan.</li>
-                    <li><strong>Revenue Drop:</strong> The MRR dropped to $16K in July after the company experienced losses during June.</li>
+                    <li><strong>Market Dominance:</strong> US leads in SaaS funding; HR, Finance, and Marketing are the most common segments.</li>
+                    <li><strong>Growth Trends:</strong> Identified a massive surge in startup founding during the mid-2010s global SaaS boom.</li>
+                    <li><strong>Efficiency:</strong> Analyzed "Funding Efficiency" by calculating funding per employee to identify lean, high-resource startups.</li>
+                    <li><strong>Survival Patterns:</strong> Active startups are generally younger, while acquired/closed ones often had higher funding.</li>
                 </ul>
             </div>
 
-            <div class="detail-section">
-                <span class="detail-heading solution-color">🛠️ My 4-Step Solution</span>
-                <ul class="step-list">
-                    <li><strong>1️⃣ Defining the KPIs:</strong> Displayed "North Star" metrics (ARR, MRR, CAC, LTV) to give executives the "big picture" instantly.</li>
-                    <li><strong>2️⃣ Trend Analysis:</strong> Used line charts to track Monthly Recurring Revenue, confirming the prediction of revenue decline between April and June.</li>
-                    <li><strong>3️⃣ Segmentation:</strong> Broke down data by Plan Type, revealing that while Enterprise brings the most revenue, the Basic tier contains the high-risk customers.</li>
-                    <li><strong>4️⃣ Adding Insights:</strong> Populated chart areas with text annotations to describe data significance and identify the "critical retention failure point."</li>
-                </ul>
+            <div class="box">
+                <span class="label" style="color:#58a6ff;">⚙️ TECHNICAL SKILLS APPLIED</span>
+                SQL Aggregations (SUM, AVG), Date Functions (EXTRACT), and Window Functions for cohort analysis and survival patterns.
             </div>
 
-            <div class="detail-section">
-                <span class="detail-heading result-color">✅ The Result</span>
-                <p>By connecting the Churn Rate to the Monthly Revenue drop, I can show a company exactly where to focus their customer success efforts to protect their $3M ARR.</p>
-            </div>
+            <a href="https://github.com/martinsamer/SaaS-Startup-Analysis" target="_blank" class="btn outline small-btn">View Full SQL Code on GitHub</a>
         </div>
     </div>
 
-    <div class="project-card reveal">
-        <img src="retail-project.png" alt="Retail Power BI Dashboard" class="project-image">
-        <div class="project-content">
-            <h3 class="project-title">📊 Solving the $8M Retail Revenue Mystery: A Power BI Deep-Dive</h3>
-            <div class="tag-container">
-                <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Star Schema</span>
-            </div>
-
-            <div class="detail-section">
-                <span class="detail-heading problem-color">🚩 The Problem</span>
-                <p>“Why did sales suddenly drop in April?” I examined an e-commerce dataset showing $8M in total sales that initially appeared perfect. A detailed examination uncovered a 16% customer return rate and a major Q2 revenue drop.</p>
-            </div>
-
-            <div class="detail-section">
-                <span class="detail-heading solution-color">🧹 Data Cleaning (The Dirty Work)</span>
-                <p>Analyzed 500,000+ rows to verify the accuracy of the $8M claim.</p>
-                <ul>
-                    <li><strong>Duplicate Orders:</strong> Used Power Query to eliminate duplicates while establishing a single source of truth.</li>
-                    <li><strong>Non-product data:</strong> Used Advanced Filtering to remove outliers like "CRUK Commission" which were skewing return data.</li>
-                </ul>
-            </div>
-
-            <div class="detail-section">
-                <span class="detail-heading result-color">⚙️ Technical Challenges & Fixes</span>
-                <ul>
-                    <li><strong>Complex DAX:</strong> Created measures for Average Order Value and Return Cost Impact, using the DIVIDE function to handle "division by zero" errors.</li>
-                    <li><strong>High-Speed Reporting:</strong> Organized data into a <strong>Star Schema</strong> for high-speed filtering and performance.</li>
-                </ul>
-            </div>
-
-            <div class="detail-section">
-                <span class="detail-heading solution-color">💡 Business Recommendations</span>
-                <p>✅ <strong>Kill "Dead Stock":</strong> Stop selling the top 10 high-return products immediately.<br>
-                   ✅ <strong>Quality Control:</strong> Audit suppliers for new products launched in Q2.<br>
-                   ✅ <strong>Profit Targeting:</strong> Shift marketing to countries with high AOV and low return rates.</p>
-                <p><strong>📌 The Lesson:</strong> Data analysis isn’t about making charts—it’s about making decisions.</p>
-            </div>
-        </div>
-    </div>
-
-    <footer class="reveal">
+    <footer>
         <h2>Let's Connect</h2>
-        <p>Looking for a Data Analyst who speaks the language of business growth?</p>
-        <br>
-        <a href="mailto:martinsamer91@gmail.com" class="btn btn-primary">Email Me</a>
-        <a href="https://www.linkedin.com/in/martin-samer-578094295" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
-        
-        <p style="margin-top: 50px; color: var(--text-dim); font-size: 0.9rem;">&copy; 2026 Martin Samer</p>
+        <a href="mailto:martinsamer91@gmail.com" class="btn blue">Email Me</a>
+        <a href="https://www.linkedin.com/in/martin-samer-578094295" target="_blank" class="btn outline">LinkedIn Profile</a>
     </footer>
 </div>
 
-<script>
-    // Intersection Observer for Reveal Animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
-
 </body>
 </html>
+
